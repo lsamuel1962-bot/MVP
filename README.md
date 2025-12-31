@@ -46,6 +46,6 @@ These stories help you prioritize which features to build next>
    "As a Boomer concerned about privacy, I want to see that my data is being processed locally in my browser so that I feel secure using the tool for my personal business ideas."
 
 <p align="center">
-  <img src="images/wireframe.png" alt="Boomer Prompt Pro Wireframe" width="600">
+  <img src="MVP/Project1 - AI Prompt Creator for Seniors/Images/wireframe.png" width="600">
 </p>
 
