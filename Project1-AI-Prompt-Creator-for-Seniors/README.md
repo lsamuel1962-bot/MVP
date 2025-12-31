@@ -45,4 +45,4 @@ These stories help you prioritize which features to build next>
 3. The Safety-Conscious User:
    "As a Boomer concerned about privacy, I want to see that my data is being processed locally in my browser so that I feel secure using the tool for my personal business ideas."
 
-![Wireframe](./Project1-AI-Prompt-Creator-for-Seniors/Images/wireframe.png)
+![Wireframe](./Images/wireframe.png)
