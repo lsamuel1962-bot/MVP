@@ -1,37 +1,152 @@
-body {
-  background-color: #f4f7f6; /* Soft professional grey */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+/* =========================
+   Boomer Prompt Pro v1.0
+   Premium + Calm Theme
+   ========================= */
+
+/* ---------- Base ---------- */
+:root {
+  --cream: #fffdd0;
+  --charcoal: #36454f;
+  --slate: #5f6b76;
+  --border: #c7cdd3;
+  --soft-white: rgba(255, 255, 255, 0.65);
+
+  --navy1: #0b1f3b; /* deep navy */
+  --navy2: #132a52; /* slightly lighter navy */
+
+  --accent: #c07258; /* warm terracotta */
+  --accent2: #daa520; /* goldenrod */
+
+  --focus: #0d6efd; /* Bootstrap blue focus */
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+
+/* ---------- Card ---------- */
 .card {
   border: none;
-  border-radius: 15px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  border-radius: 15px 15px 0 0 !important;
-  background: linear-gradient(45deg, #007bff, #0056b3); /* Modern Gradient */
+  background: linear-gradient(45deg, var(--navy1), var(--navy2));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.card-header h2 {
+  margin: 0;
+  font-size: 1.65rem;
+  letter-spacing: 0.2px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ---------- Labels ---------- */
 .form-label {
-  font-weight: 600;
-  color: #495057;
+  font-weight: 700;
+  color: var(--charcoal);
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
 }
 
+/* Specific label for the engineered prompt line */
+.engineered-prompt-label {
+  color: var(--charcoal);
+}
+
+/* ---------- Inputs ---------- */
+.form-control {
+  font-size: 1.05rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--charcoal);
+}
+
+.form-control::placeholder {
+  color: #8a96a3;
+}
+
+.form-control:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.22);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-size: 1.1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+}
+
+/* Primary: warm premium gradient, but calm */
 .btn-primary {
-  background: linear-gradient(45deg, #28a745, #218838); /* Green for "Action" */
+  background: linear-gradient(45deg, var(--accent), var(--accent2));
   border: none;
-  font-weight: bold;
-  transition: transform 0.2s;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: none; /* calmer */
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.12);
 }
 
+.btn-outline-secondary {
+  border-color: var(--border);
+  color: var(--charcoal);
+}
+
+.btn-outline-secondary:hover {
+  background: rgba(54, 69, 79, 0.06);
+  border-color: rgba(54, 69, 79, 0.25);
+  color: var(--charcoal);
+}
+
+/* ---------- Output area ---------- */
 #result {
-  background-color: #e9ecef;
-  border: 1px dashed #adb5bd;
-  font-family: "Courier New", Courier, monospace; /* Makes the prompt look like "code" */
+  background-color: var(--cream);
+  border: 2px dashed rgba(54, 69, 79, 0.35);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* ---------- Calm section treatment for output block ---------- */
+.card-body .mt-4 {
+  padding: 1rem;
+  background: var(--soft-white);
+  border: 1px solid rgba(54, 69, 79, 0.12);
+  border-radius: 14px;
+}
+
+/* ---------- Accessibility / Comfort ---------- */
+hr {
+  opacity: 0.15;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
